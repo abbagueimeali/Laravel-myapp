@@ -28,6 +28,7 @@ Route::controller(LoginController::class)->group(function(){
     Route::get('/resend_activation_code/{token}', 'resendActivationCode')->name('app_resend_activation_code');
     Route::get('/activation_account_link/{token}', 'activationAccountLink')->name('app_activation_account_link');
     Route::match(['get','post'], '/activation_account_change_email/{token}', 'ActivationAccoutChangeEmail')->name('app_activation_account_change_email');
+    Route::match(['get', 'post'], '/forgot_password', 'forgotPassword')->name('app_forgotpassword');
 });
 
 
